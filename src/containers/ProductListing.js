@@ -1,20 +1,26 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import ProductComponent from './ProductComponent';
-import {fetchProducts} from '../redux/actions/productActions'
+import { fetchProducts } from '../redux/actions/productActions';
+import Filter from './Filters';
 
 const ProductListing = () => {
 	const products = useSelector((state) => state);
-    const dispatch = useDispatch();
+	const dispatch = useDispatch();
 
 	useEffect(() => {
 		dispatch(fetchProducts());
 	}, []);
-
-    console.log('Products',products)
 	return (
-		<div className="ui grid container">
-			<ProductComponent />
+		<div>
+			<div className="filter">
+				<div>
+					<Filter />
+				</div>
+			</div>
+			<div className="ui grid container">
+				<ProductComponent />
+			</div>
 		</div>
 	);
 };

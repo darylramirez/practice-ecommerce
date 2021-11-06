@@ -97,3 +97,16 @@
 	font-size: 18px;
 	margin-left: 0;
 }
+
+.filter{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1rem;
+  margin: 1.2rem;
+
+}
+
+.filter div {
+  flex: 1;
+}

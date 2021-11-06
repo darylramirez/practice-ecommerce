@@ -11,15 +11,11 @@ const ProductDetail = () => {
 	const product = useSelector((state) => state.product);
 	const { image, title, price, category, description } = product;
 	const { productId } = useParams();
-	console.log(product);
 	const dispatch = useDispatch();
-
 
 	useEffect(() => {
 		if (productId && productId !== '') dispatch(fetchProduct(productId));
-		return () => {
-			dispatch(removeSelectedProduct());
-		};
+		dispatch(removeSelectedProduct());
 	}, [productId]);
 
 	return (

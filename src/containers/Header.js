@@ -1,5 +1,4 @@
 import React from 'react';
-import ProductListing from './ProductListing';
 import { Link } from 'react-router-dom';
 
 const Header = () => {
