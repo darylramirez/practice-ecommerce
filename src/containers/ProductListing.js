@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import ProductComponent from './ProductComponent';
 import { fetchProducts } from '../redux/actions/productActions';
 import Filter from './Filters';
+import Cart from './Cart';
 
 const ProductListing = () => {
 	const products = useSelector((state) => state);

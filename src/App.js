@@ -3,6 +3,7 @@ import Header from './containers/Header';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ProductListing from './containers/ProductListing';
 import ProductDetail from './containers/ProductDetail';
+import Cart from './containers/Cart';
 
 function App() {
 	return (
@@ -12,6 +13,7 @@ function App() {
 				<Routes>
 					<Route path="/" exact element={<ProductListing />} />
 					<Route path="/product/:productId" exact element={<ProductDetail />} />
+					<Route path="/product/cart" exact element={<Cart />} />
 					<Route>404 Not Found!</Route>
 				</Routes>
 			</Router>

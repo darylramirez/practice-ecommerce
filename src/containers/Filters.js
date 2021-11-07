@@ -2,6 +2,8 @@ import React from 'react';
 // import { renderMatches } from 'react-router';
 import { useSelector } from 'react-redux';
 import { useState } from 'react';
+import Cart from './Cart';
+import { Link } from 'react-router-dom';
 
 const Filter = () => {
 	const [state, setState] = React.useState({ price: '', category: '' });
@@ -72,6 +74,14 @@ const Filter = () => {
 						<option value="electronics">Electronics</option>
 					</select>
 				</div>
+			</div>
+			<div>
+				<Link to={'/product/cart'}>
+					<div>
+						<i className="shop icon"></i>
+					</div>
+					<div className="visible content">Cart</div>
+				</Link>
 			</div>
 		</div>
 	);

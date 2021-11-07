@@ -13,6 +13,10 @@ const ProductDetail = () => {
 	const { productId } = useParams();
 	const dispatch = useDispatch();
 
+ function addToCart(productId){
+    localStorage.setItem('cartItems', JSON.stringify(cartItems))
+ };
+
 	useEffect(() => {
 		if (productId && productId !== '') dispatch(fetchProduct(productId));
 		dispatch(removeSelectedProduct());
@@ -41,7 +45,7 @@ const ProductDetail = () => {
 									<div className="hidden content">
 										<i className="shop icon"></i>
 									</div>
-									<div className="visible content">Add to Cart</div>
+									<div className="visible content" onClick={(productId)=>addToCart(productId)}>Add to Cart</div>
 								</div>
 							</div>
 						</div>
