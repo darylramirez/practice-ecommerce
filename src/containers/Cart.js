@@ -6,7 +6,7 @@ export default class Cart extends Component {
 		this.removeFromCart = this.removeFromCart.bind(this);
 	}
 	removeFromCart() {
-		localStorage.setItem('cartItems', JSON.stringify(cartItems));
+		localStorage.setItem('cartItems', JSON.stringify());
 	}
 
 	render() {
