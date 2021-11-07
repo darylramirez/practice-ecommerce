@@ -76,7 +76,7 @@ const Filter = () => {
 				</div>
 			</div>
 			<div>
-				<Link to={'/product/cart'}>
+				<Link exact to={'/product/cart'}>
 					<div>
 						<i className="shop icon"></i>
 					</div>

@@ -117,3 +117,30 @@
 	align-items: flex-end;
 }
 
+.form-container {
+	padding: 0;
+	width: 100%;
+	list-style-type: none;
+}
+
+.form-container li {
+	display: flex;
+	flex-direction: column;
+	padding: 1rem;
+}
+
+form {
+	width: 100%;
+}
+
+input {
+	padding: 1rem;
+	border: 0.1rem gray solid;
+}
+
+button {
+	width: 50%;
+	align-items:center;
+	display: flex;
+	flex-direction: column;
+}
